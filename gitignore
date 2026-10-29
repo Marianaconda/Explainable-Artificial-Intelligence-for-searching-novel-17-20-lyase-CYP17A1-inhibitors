@@ -1,0 +1,76 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+.virtual_documents/
+
+# ---------- IDEs / OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Office temp files ----------
+~$*
+.~lock.*#
+
+# ---------- ML training artifacts ----------
+catboost_info/              # created by CatBoost in the working directory
+lightning_logs/
+mlruns/
+wandb/
+optuna_*.db
+*.sqlite3
+*.log
+
+# ---------- Model files ----------
+# ignore all dumps, keep only the final published model
+*.pkl
+*.joblib
+*.cbm
+*.pt
+*.h5
+!models/catboost_final.cbm
+
+# ---------- Data ----------
+# raw, interim and generated data stay local
+data/raw/
+data/interim/
+data/external/
+data/*.csv
+data/*.parquet
+# the curated dataset is tracked; large temporary computation results are not
+!data/DATA_CYP17.xlsx
+
+# PaDEL / descriptor calculation temporary files
+*.sdf.tmp
+padel_tmp/
+*.smi.bak
+
+# ---------- Figures ----------
+# print-resolution TIFFs are too large for GitHub (100 MB limit); keep them outside the repo
+*.tif
+*.tiff
+# PNG/JPG previews in figures/ are tracked
+
+# ---------- Secrets ----------
+.env
+*.key
