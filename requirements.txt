@@ -1,0 +1,30 @@
+# Core scientific stack
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+openpyxl>=3.1            # pandas.read_excel for DATA_CYP17.xlsx
+
+# Machine learning
+scikit-learn>=1.5        # TSNE(max_iter=...) requires >=1.5
+xgboost>=2.0
+lightgbm>=4.0
+catboost>=1.2
+optuna>=3.4              # CatBoost hyperparameter optimization
+
+# Explainable AI
+shap>=0.44
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.12            # barplot(errorbar="sd")
+pillow>=10.0             # TIFF export (LZW compression)
+
+# Cheminformatics (fingerprints and descriptors)
+rdkit>=2023.9            # MACCS keys, structure handling
+padelpy>=0.1.13          # CDK / Klekota-Roth fingerprints via PaDEL (needs Java)
+chemopy                  # ChemoPy molecular descriptors; if pip install fails, install from source
+
+# Notebooks
+jupyterlab>=4.0
+ipykernel>=6.25
+tqdm>=4.65
